@@ -1,0 +1,63 @@
+.tollbar {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    background-color: #1d9480;
+    position: fixed;
+    top: 0;
+    box-shadow: -2px 0px 15px 0px grey;
+    z-index: 1;
+} 
+
+.app-sidenav{
+    position: relative;
+    float: left;
+    display: block;
+    width: 200px;
+    height: 100%;
+    background: #000000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: .3s;
+    box-shadow: -1px 0px 15px 0px grey;
+}
+
+.app-menu-backgroud{
+    background: #f2f2f2;
+}
+
+.app-sidenav-container {
+    position: absolute;
+    background-color: #000000;
+    top: 56px;
+    width: 100%;
+    bottom: 0;
+    word-wrap: normal;
+    overflow: hidden;
+}
+
+.app-container{
+    background: #f2f2f2;
+    height: 100%;
+    display: flex;
+}
+
+.app-sidenav-close {
+    margin-left: -200px;
+    transition: .3s ease-in-out;
+}
+
+.material-icons { 
+    color: white;
+}
+
+.logo {
+    width: 116px;
+    object-fit: contain;
+}
+
+.button-logout {
+    margin: 6px 20px;
+    right: 0;
+    position: absolute;
+}
