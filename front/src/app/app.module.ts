@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuPrincipalComponent } from './components/menu-principal/menu-principal.component';
 import { MatButtonModule } from '@angular/material/button';
+import { ListaPessoasComponent } from './components/lista-pessoas/lista-pessoas.component';
+import { CheckinComponent } from './components/checkin/checkin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuPrincipalComponent,
+    ListaPessoasComponent,
+    CheckinComponent,
   ],
   imports: [
     BrowserModule,

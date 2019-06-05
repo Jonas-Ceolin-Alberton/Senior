@@ -15,7 +15,6 @@
     display: block;
     width: 200px;
     height: 100%;
-    background: #000000;
     overflow-x: hidden;
     overflow-y: auto;
     transition: .3s;
@@ -28,7 +27,6 @@
 
 .app-sidenav-container {
     position: absolute;
-    background-color: #000000;
     top: 56px;
     width: 100%;
     bottom: 0;
