@@ -8,10 +8,19 @@
     background-color: #347ab6;
     color: white;
     padding: 5px 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 21px;
 }
 
 .body-card {
     padding: 16px;
     background-color: white;
     border-radius: 0 0 8px 8px;
+}
+
+.button-exit {
+    position: absolute;
+    right: 0;
 }

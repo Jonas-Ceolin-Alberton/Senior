@@ -1,11 +1,23 @@
 <div class="container-lista">
-	<app-cadastro-pessoa *ngIf="exibirModalCadastroPessoa" (fecharCadastroPessoasEvent)="fecharCadastroPessoas()"></app-cadastro-pessoa>
-		<span>Pessoas</span>
-		<mat-card *ngFor="let pessoa of pessoas" class="card">
+	<app-cadastro-pessoa *ngIf="exibirModalCadastroPessoa" 
+						 (fecharCadastroPessoasEvent)="fecharCadastroPessoas()"
+			             (atualizarListaPessoasEvent)="atualizarLista()">
+	</app-cadastro-pessoa>
+
+	<span>Pessoas</span>
+	<div *ngFor="let pessoa of pessoas" >
+		<mat-card *ngIf="!pessoa.editando" class="card">
 			<div class="item"> {{pessoa.nome}}</div>
 			<div class="item">{{pessoa.documento}}</div>
 			<div class="item">{{pessoa.telefone}}</div>
-		</mat-card>
+		<button (click)="editarPessoa(pessoa)">editar</button>
+	</mat-card>
+
+		<app-cadastro-pessoa *ngIf="pessoa.editando" 
+						 (fecharCadastroPessoasEvent)="fecharCadastroPessoas()"
+			             (atualizarListaPessoasEvent)="atualizarLista()">
+	    </app-cadastro-pessoa>
+	</div>
 </div>
 
 <button mat-fab class="button-add" (click)="exibirCadastroPessoas()">

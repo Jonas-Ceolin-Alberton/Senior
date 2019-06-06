@@ -1,3 +1,4 @@
+import { PessoaService } from './../../services/pessoa.service';
 import { Component, OnInit } from '@angular/core';
 import { Pessoa } from 'src/app/models/pessoa.model';
 
@@ -8,12 +9,18 @@ import { Pessoa } from 'src/app/models/pessoa.model';
 })
 export class ListaPessoasComponent implements OnInit {
 	pessoas: Array<Pessoa> = [];
+	pessoaEditando: Pessoa;
 	exibirModalCadastroPessoa: boolean = false;
+	exibirModalEdicaoPessoa: boolean = false;
 
-	constructor() { }
+	constructor(private pessoaService: PessoaService) { }
 
 	ngOnInit() {
-		this.buildPessoas();
+		this.listarPessoas();
+	}
+
+	listarPessoas() {
+		this.pessoas = this.pessoaService.getAll();
 	}
 
 	buildPessoas(): void {
@@ -38,6 +45,23 @@ export class ListaPessoasComponent implements OnInit {
 
 	fecharCadastroPessoas(): void {
 		this.exibirModalCadastroPessoa = false;
+	}
+
+	exibirEdicaoPessoas(): void {
+		this.exibirModalEdicaoPessoa = true;
+	}
+
+	fecharEdicaoPessoas(): void {
+		this.exibirModalEdicaoPessoa = false;
+	}
+
+	atualizarLista() {
+		this.pessoas = this.pessoaService.getAll();
+	}
+
+	editarPessoa(pessoa: Pessoa) {
+		this.pessoaEditando = pessoa;
+		this.exibirEdicaoPessoas();
 	}
 
 }

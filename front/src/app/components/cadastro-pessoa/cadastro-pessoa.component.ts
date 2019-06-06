@@ -1,5 +1,7 @@
+import { PessoaService } from './../../services/pessoa.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Pessoa } from 'src/app/models/pessoa.model';
+import { UtilService } from 'src/app/shared/util.service';
 
 @Component({
     selector: 'app-cadastro-pessoa',
@@ -8,9 +10,11 @@ import { Pessoa } from 'src/app/models/pessoa.model';
 })
 export class CadastroPessoaComponent implements OnInit {
     @Output() fecharCadastroPessoasEvent: EventEmitter<any> = new EventEmitter();
+    @Output() atualizarListaPessoasEvent: EventEmitter<any> =  new EventEmitter();
     pessoa: Pessoa =  new Pessoa();
-    
-    constructor() { }
+
+    constructor(private pessoaService: PessoaService,
+                private utilService: UtilService) { }
 
     ngOnInit() {
     }
@@ -20,6 +24,9 @@ export class CadastroPessoaComponent implements OnInit {
     }
 
     salvar(): void {
-        console.log("salvou", this.pessoa);
+        this.pessoaService.save(this.pessoa);
+        this.utilService.openSnackBar('Pessoa cadastrada com sucesso!', 'fechar');
+        this.atualizarListaPessoasEvent.emit();
+        this.fecharCadastroPessoasEvent.emit();
     } 
 }
