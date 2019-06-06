@@ -1,3 +1,13 @@
-<p>
-  lista-pessoas works!
-</p>
+<div class="container-lista">
+	<app-cadastro-pessoa *ngIf="exibirModalCadastroPessoa" (fecharCadastroPessoasEvent)="fecharCadastroPessoas()"></app-cadastro-pessoa>
+		<span>Pessoas</span>
+		<mat-card *ngFor="let pessoa of pessoas" class="card">
+			<div class="item"> {{pessoa.nome}}</div>
+			<div class="item">{{pessoa.documento}}</div>
+			<div class="item">{{pessoa.telefone}}</div>
+		</mat-card>
+</div>
+
+<button mat-fab class="button-add" (click)="exibirCadastroPessoas()">
+	<i class="material-icons">add</i>
+</button>

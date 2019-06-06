@@ -7,3 +7,13 @@ html, body {
     margin: 0;
     font-family: 'Fira Sans', sans-serif;
 }
+
+.container-lista {
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow: auto;
+    width: 90%;
+    margin-top: 30px;
+}

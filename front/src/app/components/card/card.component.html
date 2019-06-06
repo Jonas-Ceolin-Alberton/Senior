@@ -1,0 +1,11 @@
+<div class="container-card">
+	<div class="cabecalho">
+		<div>{{titulo}}</div>
+		<button mat-icon-button class="button-exit" (click)="fecharCard()">
+			<i class="material-icons">close</i>
+		</button>
+	</div>
+	<div class="body-card">
+		<ng-content></ng-content>
+	</div>
+</div>

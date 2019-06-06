@@ -8,6 +8,9 @@ import { MenuPrincipalComponent } from './components/menu-principal/menu-princip
 import { MatButtonModule } from '@angular/material/button';
 import { ListaPessoasComponent } from './components/lista-pessoas/lista-pessoas.component';
 import { CheckinComponent } from './components/checkin/checkin.component';
+import { MatCardModule } from '@angular/material/card';
+import { CadastroPessoaComponent } from './components/cadastro-pessoa/cadastro-pessoa.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { CheckinComponent } from './components/checkin/checkin.component';
     MenuPrincipalComponent,
     ListaPessoasComponent,
     CheckinComponent,
+    CadastroPessoaComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
