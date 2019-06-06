@@ -10,6 +10,10 @@
     flex-flow: row;
 }
 
+.card:hover .button-edit {
+    visibility: visible;
+}
+
 .item {
     margin-right: 30px;
     width: 30%;
@@ -20,4 +24,16 @@
     right: 20px;
     bottom: 20px;
     background-color: #347ab6;
+}
+
+.button-edit {
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    align-self: center;
+    right: 0;
+}
+
+.button-edit i {
+    margin-left: 6px;
 }
