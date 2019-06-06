@@ -11,6 +11,9 @@ import { CheckinComponent } from './components/checkin/checkin.component';
 import { MatCardModule } from '@angular/material/card';
 import { CadastroPessoaComponent } from './components/cadastro-pessoa/cadastro-pessoa.component';
 import { CardComponent } from './components/card/card.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CardComponent } from './components/card/card.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

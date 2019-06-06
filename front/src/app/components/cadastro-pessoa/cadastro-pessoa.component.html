@@ -1,3 +1,18 @@
 <app-card [titulo]="'Cadastro de Pessoas'" (fecharCardEvent)="fecharCadastroPessoas()">
-  teste
-</app-card> 
+	<form #form="ngForm" class="form" autocomplete="off" (ngSubmit)="salvar()">
+		<div class="row-fields">
+			<mat-form-field  class="form-item">
+				<input matInput required placeholder="Nome" name="nome" [(ngModel)]="pessoa.nome">
+			</mat-form-field>
+	
+			<mat-form-field class="form-item">
+				<input matInput required placeholder="Documento" name="documento"  [(ngModel)]="pessoa.documento">
+			</mat-form-field>
+	
+			<mat-form-field class="form-item">
+				<input matInput required placeholder="Telefone" name="telefone"  [(ngModel)]="pessoa.telefone">
+			</mat-form-field>
+		</div>
+		<button mat-raised-button type="submit" class="button-salvar" [disabled]="form.invalid">Salvar</button>
+	</form>
+</app-card>

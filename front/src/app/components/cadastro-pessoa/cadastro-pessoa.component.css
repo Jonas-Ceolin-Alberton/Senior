@@ -1,0 +1,9 @@
+.form-item {
+    width: 30%;
+    margin-right: 30px;
+}
+
+.button-salvar {
+    background-color: #347ab6;;
+    color: white;
+}
