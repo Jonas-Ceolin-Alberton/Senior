@@ -1,3 +1,16 @@
-<p>
-  checkin works!
-</p>
+<div class="container-lista">
+	<app-cadastro-checkin *ngIf="exibirModalCadastroCheckin" (fecharCadastroCheckinEvent)="fecharCadastroCheckin()" (atualizarListaCheckinEvent)="atualizarLista()"></app-cadastro-checkin>
+
+	<span>Check-ins</span>
+	<div *ngFor="let checkin of checkins">
+		<mat-card class="card">
+			<div class="item"> {{checkin.pessoa.nome}}</div>
+			<div class="item">{{checkin.pessoa.documento}}</div>
+			<div class="item">{{checkin.valor}}</div>
+		</mat-card>
+	</div>
+</div>
+
+<button mat-fab class="button-add" (click)="exibirCadastroCheckin()">
+	<i class="material-icons">add</i>
+</button>

@@ -1,0 +1,18 @@
+<app-card [titulo]="'Novo check-in'" (fecharCardEvent)="fecharCadastroCheckin()">
+	<form #form="ngForm" class="form" autocomplete="off" (ngSubmit)="salvar()">
+			<div class="row-fields">
+				<mat-form-field  class="form-item">
+					<input matInput required type="datetime-local" placeholder="Data/hora de entrada" name="dataEntrada" [(ngModel)]="checkin.dataEntrada">
+				</mat-form-field>
+		
+				<mat-form-field class="form-item">
+					<input matInput required type="datetime-local" placeholder="Data/hora de saída" name="dataSaida"  [(ngModel)]="checkin.dataSaida">
+				</mat-form-field>
+		
+				<app-pessoa-autocomplet class="form-item" name="pessoa" [(ngModel)]="checkin.pessoa" ></app-pessoa-autocomplet>
+
+				<mat-checkbox color="primary" class="form-item" name="possuiVeiculo" [(ngModel)]="checkin.adicionalVeiculo">Possui veículo</mat-checkbox>
+			</div>
+			<button mat-raised-button type="submit" class="button-salvar" [disabled]="form.invalid">Salvar</button>
+		</form>
+</app-card>

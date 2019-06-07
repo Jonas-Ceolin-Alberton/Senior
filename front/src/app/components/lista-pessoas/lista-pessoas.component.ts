@@ -26,12 +26,12 @@ export class ListaPessoasComponent implements OnInit {
 	buildPessoas(): void {
 		let pessoa: Pessoa =  new Pessoa();
 		pessoa.nome = 'Lucas Retardado';
-		pessoa.documento = 123456789;
+		pessoa.documento = '123456789';
 		pessoa.telefone = "(48) 9999-1234";
 
 		let pessoa2: Pessoa =  new Pessoa();
 		pessoa2.nome = 'Gustavo Retardado';
-		pessoa2.documento = 987654321;
+		pessoa2.documento = '987654321';
 		pessoa2.telefone = "(48) 9999-4567";
 
 		this.pessoas.push(pessoa);

@@ -15,6 +15,10 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CadastroCheckinComponent } from './components/cadastro-checkin/cadastro-checkin.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { PessoaAutocompletComponent } from './components/pessoa-autocomplet/pessoa-autocomplet.component';
 
 @NgModule({
 	declarations: [
@@ -24,6 +28,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 		CheckinComponent,
 		CadastroPessoaComponent,
 		CardComponent,
+		CadastroCheckinComponent,
+		PessoaAutocompletComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -34,7 +40,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 		FormsModule,
 		MatFormFieldModule,
 		MatInputModule,
-		MatSnackBarModule
+		MatSnackBarModule,
+		MatCheckboxModule,
+		MatAutocompleteModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

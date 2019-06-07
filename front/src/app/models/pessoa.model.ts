@@ -1,6 +1,6 @@
 export class Pessoa {
 	id: string;
 	nome: string;
-	documento: number;
+	documento: string;
 	telefone: string;
 }
