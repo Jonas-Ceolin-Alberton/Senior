@@ -9,7 +9,7 @@
 					<input matInput required type="datetime-local" placeholder="Data/hora de saída" name="dataSaida"  [(ngModel)]="checkin.dataSaida">
 				</mat-form-field>
 		
-				<app-pessoa-autocomplet class="form-item" name="pessoa" [(ngModel)]="checkin.pessoa" ></app-pessoa-autocomplet>
+				<app-pessoa-autocomplet class="form-item" name="pessoa" required="true" [(ngModel)]="checkin.pessoa" ></app-pessoa-autocomplet>
 
 				<mat-checkbox color="primary" class="form-item" name="possuiVeiculo" [(ngModel)]="checkin.adicionalVeiculo">Possui veículo</mat-checkbox>
 			</div>

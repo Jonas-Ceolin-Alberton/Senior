@@ -19,6 +19,7 @@ import { CadastroCheckinComponent } from './components/cadastro-checkin/cadastro
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { PessoaAutocompletComponent } from './components/pessoa-autocomplet/pessoa-autocomplet.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
 	declarations: [
@@ -42,7 +43,8 @@ import { PessoaAutocompletComponent } from './components/pessoa-autocomplet/pess
 		MatInputModule,
 		MatSnackBarModule,
 		MatCheckboxModule,
-		MatAutocompleteModule
+		MatAutocompleteModule,
+		MatRadioModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

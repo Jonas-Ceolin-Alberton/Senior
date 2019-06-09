@@ -27,11 +27,15 @@ export class CadastroCheckinComponent implements OnInit {
 	}
 
 	salvar() {
-		this.checkin.calcularValor();
 		this.checkinservice.save(this.checkin);
 		this.utilService.openSnackBar('Check-in salvo com sucesso!', 'fechar');
-		this.atualizarListaCheckinEvent.emit();
-		this.fecharCadastroCheckinEvent.emit();
+		this.atualizarLista();
+		this.fecharCadastroCheckin();
 	}
+	
+	atualizarLista() {
+		this.atualizarListaCheckinEvent.emit();
+	}
+
 
 }

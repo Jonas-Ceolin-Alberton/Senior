@@ -1,4 +1,11 @@
 <div class="container-lista">
+	
+	<mat-radio-group *ngIf="!exibirModalCadastroCheckin"  [(ngModel)]="filtro" (ngModelChange)="alterarFiltro()">
+		<mat-radio-button color="primary" value="TODOS">Todos</mat-radio-button>
+		<mat-radio-button color="primary" value="PRESENTES">Pessoas ainda presentes</mat-radio-button>
+		<mat-radio-button color="primary" value="NAO_PRESENTES">Pessoas que já deixaram o hotel</mat-radio-button>
+	</mat-radio-group>
+
 	<app-cadastro-checkin *ngIf="exibirModalCadastroCheckin" (fecharCadastroCheckinEvent)="fecharCadastroCheckin()" (atualizarListaCheckinEvent)="atualizarLista()"></app-cadastro-checkin>
 
 	<span>Check-ins</span>
@@ -6,7 +13,7 @@
 		<mat-card class="card">
 			<div class="item"> {{checkin.pessoa.nome}}</div>
 			<div class="item">{{checkin.pessoa.documento}}</div>
-			<div class="item">{{checkin.valor}}</div>
+			<div class="item">{{checkinService.calcularValorDiaria(checkin) | currency:'BRL':true}}</div>
 		</mat-card>
 	</div>
 </div>
