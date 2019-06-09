@@ -9,4 +9,6 @@
 
 ```ng serve --open ```
 
-![pessoas](https://user-images.githubusercontent.com/25384459/59163532-c5f13880-8ad8-11e9-8ada-ca3452926a15.JPG)
+![Capturar](https://user-images.githubusercontent.com/25384459/59163578-3b5d0900-8ad9-11e9-8211-1b63ffa0cd5a.JPG)
+![ch](https://user-images.githubusercontent.com/25384459/59163579-3b5d0900-8ad9-11e9-9da9-28b39b6263ce.JPG)
+
