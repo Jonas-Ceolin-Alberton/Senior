@@ -1,13 +1,10 @@
 # Senior front-end teste
 
-## Instalar
+## Como instalar
     * git clone
     * cd /front
-    * sudo npm install
+    * npm install
 
 ## Executar projeto 
 
 ```ng serve --open ```
-
-## Executar testes
-```ng test```
