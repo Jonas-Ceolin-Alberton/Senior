@@ -33,7 +33,6 @@ export abstract class AbstractService<T> {
 	}
 
 	save(elemento): void {
-		debugger
 		elemento.id = this.generateId();
 		let dados: Array<any> = this.getAll();
 		dados.unshift(elemento);
