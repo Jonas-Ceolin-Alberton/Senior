@@ -3,4 +3,7 @@ export class Pessoa {
 	nome: string;
 	documento: string;
 	telefone: string;
+
+	// trasnsaction
+	editando = false;
 }

@@ -25,9 +25,22 @@ export abstract class AbstractService<T> {
 		localStorage.setItem(this.chave, JSON.stringify(dados));
 	}
 
+	delete(elemento): void {
+		let dados: Array<any> = this.getAll();
+		let index = dados.findIndex( element =>  element.id === elemento.id );
+		dados.splice(index, 1);
+		localStorage.setItem(this.chave, JSON.stringify(dados));
+	}
+
 	save(elemento): void {
+		debugger
+		elemento.id = this.generateId();
 		let dados: Array<any> = this.getAll();
 		dados.unshift(elemento);
 	    localStorage.setItem(this.chave, JSON.stringify(dados));
+	}
+
+	private generateId(): string {
+		return Math.random().toString(16).slice(2);
 	}
 }

@@ -11,7 +11,6 @@ export class ListaPessoasComponent implements OnInit {
 	pessoas: Array<Pessoa> = [];
 	pessoaEditando: Pessoa;
 	exibirModalCadastroPessoa: boolean = false;
-	exibirModalEdicaoPessoa: boolean = false;
 
 	constructor(private pessoaService: PessoaService) { }
 
@@ -47,21 +46,11 @@ export class ListaPessoasComponent implements OnInit {
 		this.exibirModalCadastroPessoa = false;
 	}
 
-	exibirEdicaoPessoas(): void {
-		this.exibirModalEdicaoPessoa = true;
-	}
-
-	fecharEdicaoPessoas(): void {
-		this.exibirModalEdicaoPessoa = false;
-	}
-
 	atualizarLista() {
 		this.pessoas = this.pessoaService.getAll();
 	}
 
 	editarPessoa(pessoa: Pessoa) {
-		this.pessoaEditando = pessoa;
-		this.exibirEdicaoPessoas();
+		pessoa.editando = true;
 	}
-
 }

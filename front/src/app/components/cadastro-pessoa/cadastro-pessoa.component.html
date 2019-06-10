@@ -1,4 +1,4 @@
-<app-card [titulo]="'Cadastro de Pessoas'" (fecharCardEvent)="fecharCadastroPessoas()">
+<app-card [titulo]="getTitulo()" (fecharCardEvent)="fecharCadastroPessoas()">
 	<form #form="ngForm" class="form" autocomplete="off" (ngSubmit)="salvar()">
 		<div class="row-fields">
 			<mat-form-field  class="form-item">
@@ -13,6 +13,9 @@
 				<input matInput required placeholder="Telefone" name="telefone"  [(ngModel)]="pessoa.telefone">
 			</mat-form-field>
 		</div>
-		<button mat-raised-button type="submit" class="button-salvar" [disabled]="form.invalid">Salvar</button>
+		<div class="container-buttons">
+			<button mat-raised-button type="submit" class="button-salvar" [disabled]="form.invalid">Salvar</button>
+			<button mat-icon-button type="button" class="button-delete" *ngIf="pessoaEditando" (click)="deletarPessoa()"><i class="material-icons">delete</i></button>
+		</div>
 	</form>
 </app-card>

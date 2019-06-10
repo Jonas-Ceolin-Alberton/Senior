@@ -7,3 +7,16 @@
     background-color: #347ab6;;
     color: white;
 }
+
+.container-buttons {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+}
+
+.button-delete {
+    display: flex;
+    position: absolute;
+    right: 0;
+    padding-left: 8px;
+}

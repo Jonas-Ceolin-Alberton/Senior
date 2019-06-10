@@ -14,7 +14,8 @@
 		</mat-card>
 
 		<app-cadastro-pessoa *ngIf="pessoa.editando" 
-						 (fecharCadastroPessoasEvent)="fecharCadastroPessoas()"
+						 [pessoaEditando]="pessoa"
+						 (fecharCadastroPessoasEvent)="pessoa.editando = false"
 			             (atualizarListaPessoasEvent)="atualizarLista()">
 	    </app-cadastro-pessoa>
 	</div>
