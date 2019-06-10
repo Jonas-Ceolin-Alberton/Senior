@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListaPessoasComponent } from './components/lista-pessoas/lista-pessoas.component';
 
 const routes: Routes = [
+  { path: '', component: ListaPessoasComponent },
   { path: 'pessoas', component: ListaPessoasComponent },
   { path: 'check-in', component: CheckinComponent }
 ];
